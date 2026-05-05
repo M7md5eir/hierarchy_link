@@ -1,0 +1,52 @@
+/* Hierarchy Link
+ * --------------
+ * Minimal styling. The dropdown itself is the standard Awesomplete dropdown
+ * inherited from ControlLink, so its border / shadow / radius / padding /
+ * hover / dark-mode all come from core - we don't restyle it. The only
+ * styles below are:
+ *   - A flex helper for tree items rendered inside the Awesomplete <li>s.
+ *   - Chevron + indent helpers for collapse/expand.
+ */
+
+/* ------------------------------------------------------------------ */
+/* Tree item rendered inside the standard Awesomplete <li>            */
+/* Left-aligned, fixed widths for icons so children of the same depth */
+/* line up cleanly.                                                    */
+/* ------------------------------------------------------------------ */
+.hl-tree-item {
+	display: flex;
+	align-items: center;
+	gap: 0;
+	text-align: start;
+	min-width: 0;
+}
+
+.hl-tree-item .hl-tree-label {
+	flex: 0 1 auto;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* Chevron uses FA caret icons. The container is the same width as the
+ * footer FA icons (+ and search) so the caret glyph is centered at
+ * the same horizontal position. */
+.hl-chevron,
+.hl-chevron-spacer {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 12.3px;
+	flex: 0 0 12.3px;
+	margin-right: 5px;
+}
+
+.hl-chevron {
+	cursor: pointer;
+	color: var(--text-muted);
+}
+
+.hl-chevron:hover {
+	color: var(--text-color);
+}

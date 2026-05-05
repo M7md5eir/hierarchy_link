@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hierarchy_link *.css
+recursive-include hierarchy_link *.csv
+recursive-include hierarchy_link *.html
+recursive-include hierarchy_link *.ico
+recursive-include hierarchy_link *.js
+recursive-include hierarchy_link *.json
+recursive-include hierarchy_link *.md
+recursive-include hierarchy_link *.png
+recursive-include hierarchy_link *.py
+recursive-include hierarchy_link *.svg
+recursive-include hierarchy_link *.txt
+recursive-exclude hierarchy_link *.pyc
